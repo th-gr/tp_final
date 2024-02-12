@@ -11,10 +11,10 @@ pipeline {
         stage('Install dependencies') {
             steps {
                 dir('Pokenode') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
                 dir('Pokereact') {
-                    sh 'npm install'
+                    bat 'npm install'
                 }
             }
         }
@@ -22,10 +22,10 @@ pipeline {
         stage('Build') {
             steps {
                 dir('Pokenode') {
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
                 dir('Pokereact') {
-                    sh 'npm run build'
+                    bat 'npm run build'
                 }
             }
         }
