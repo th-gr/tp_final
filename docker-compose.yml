@@ -1,0 +1,17 @@
+version: '3'
+services:
+  pokenode:
+    build: 
+      context: ./Pokenode
+    ports:
+      - 3001:3001
+    volumes:
+      - ./Pokenode:/app-pokenode
+
+  pokereact:
+    build: 
+      context: ./Pokereact
+    ports:
+      - 5173:5173
+    volumes:
+      - ./Pokereact:/app
