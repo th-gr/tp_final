@@ -29,6 +29,7 @@ function Pokemon() {
       </button>
       {pokemons.map((pokemon, index) => (
         <div key={index}>
+        
           <h1>{pokemon.name}</h1>
 
           {isEdit ? (

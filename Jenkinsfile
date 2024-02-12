@@ -26,5 +26,14 @@ pipeline {
                 }
             }
         }
-    }
+
+        stage('Build Docker image') {
+            steps {
+                dir('Pokereact') {
+                    script {
+                        docker.build('pokereact')
+                    }
+                }
+          }
+        }
 }
