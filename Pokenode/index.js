@@ -15,7 +15,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Route GET pour la page d'accueil
 app.get('/', (req, res) => {
     // Affichage des en-têtes de requête pour le débogage (à retirer en production)
-    console.log("Headers:", req.headers);
+    console.log("Headers YO:", req.headers);
     res.send('<h1>Bienvenue sur notre page d\'accueil!</h1>');s
 });
 
