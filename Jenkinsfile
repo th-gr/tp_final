@@ -36,7 +36,7 @@ pipeline {
             steps {
                 dir('Pokereact') {
                     script {
-                        dockerImage = docker.build.registry + ":$BUILD_NUMBER"
+                        docker.build('pokereact')
                     }
                 }
           }
