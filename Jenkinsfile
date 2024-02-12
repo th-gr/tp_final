@@ -21,10 +21,10 @@ pipeline {
 
         stage('Build') {
             steps {
-                dir('Pokenode') {
+                dir('Pokereact') {
                     bat 'npm run build'
                 }
-                dir('Pokereact') {
+                dir('Pokenode') {
                     bat 'npm run build'
                 }
             }
