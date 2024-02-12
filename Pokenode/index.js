@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.get('/', (req, res) => {
     // Affichage des en-têtes de requête pour le débogage (à retirer en production)
     console.log("Headers YO:", req.headers);
-    res.send('<h1>Bienvenue sur notre page d\'accueil!</h1>');s
+    res.send('<h1>Bienvenue sur pokenode</h1>');s
 });
 
 // Route POST pour ajouter des données
