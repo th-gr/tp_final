@@ -1,4 +1,9 @@
 pipeline {
+    environment {
+        registry = 'thomasgbz/tp_final'
+        registryCredential = 'dockerhub'
+    }
+
     agent any
 
     stages {
@@ -31,9 +36,20 @@ pipeline {
             steps {
                 dir('Pokereact') {
                     script {
-                        docker.build('pokereact')
+                        dockerImage = docker.build.registry + ":$BUILD_NUMBER"
                     }
                 }
+          }
+        }
+        
+        stage('Publish Image') {
+          steps {
+            script {
+              docker.withRegistry('', registryCredential) {
+                dockerImage.push()
+                dockerImage.push("latest")
+              }
+            }
           }
         }
     }
