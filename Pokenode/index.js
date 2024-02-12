@@ -31,6 +31,7 @@ app.post('/login', userController.login);
 
 // Démarrage du serveur
 app.listen(3001, () => {
+    console.log('Pokenode est lancé !');
     console.log('Serveur démarré sur le port 3001');
 });
 
